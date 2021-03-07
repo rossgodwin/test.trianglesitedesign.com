@@ -827,7 +827,7 @@ a {
 .tsd-page-content-header, .tsd-leadership-header, .tsd-projects-header, .tsd-services-header, .tsd-markets-header, .tsd-home-header {
   grid-area: ch;
   height: 289px;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/assets/images/Wakefield-Commons-Raleigh-NC-IMG_9870-panaramic-1912x444.jpeg");
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/test.trianglesitedesign.com/assets/images/Wakefield-Commons-Raleigh-NC-IMG_9870-panaramic-1912x444.jpeg");
   margin-bottom: 25px;
 }
 
