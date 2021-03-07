@@ -1,0 +1,1354 @@
+/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Add the correct display in IE 9-.
+ */
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+figcaption,
+figure,
+main {
+  /* 1 */
+  display: block;
+}
+
+/**
+ * Add the correct margin in IE 8.
+ */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+b,
+strong {
+  font-weight: inherit;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+audio,
+video {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+  border-style: none;
+}
+
+/**
+ * Hide the overflow in IE.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+details,
+menu {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Scripting
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+canvas {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in IE.
+ */
+template {
+  display: none;
+}
+
+/* Hidden
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10-.
+ */
+[hidden] {
+  display: none;
+}
+
+html {
+  height: 100%;
+  font-family: "Poppins", Helvetica, Arial, Lucida, sans-serif;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+body {
+  height: 100%;
+}
+
+.root {
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  color: #e02b20;
+  font-family: "Poppins", Helvetica, Arial, Lucida, sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 0 0 10px 0;
+  margin: 0;
+}
+
+h5 {
+  line-height: 1.8em;
+  font-size: 11px;
+  font-weight: normal;
+  color: #333;
+}
+
+p {
+  line-height: 1.4em;
+  padding: 0;
+  margin: 0;
+  color: #666;
+}
+
+a {
+  text-decoration: none;
+}
+
+.tsd-horizontal-align-center, .tsd-leadership-bio-photo, .tsd-leadership-preview, .tsd-project-summary, .tsd-home-marketing-photo-caption, .tsd-home-marketing-photo, .tsd-home-marketing-photo-right, .tsd-home-marketing-photo-left, .tsd-page-footer-legal, .tsd-page-footer-contact-connect, .tsd-page-footer-contact-info, .tsd-page-content-header-inner, .tsd-page-content-header section, .tsd-leadership-header section, .tsd-projects-header section, .tsd-services-header section, .tsd-markets-header section, .tsd-home-header section, .tsd-quote-angled-edges, .tsd-quote-angled-edges-reverse {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tsd-horizontal-align-left, .tsd-page-footer-contact-info div {
+  text-align: left;
+  margin-right: auto;
+}
+
+.tsd-fontawesome-icon, .tsd-services-service-toggle-icon:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.tsd-btn, .tsd-btn-primary {
+  display: inline-block;
+  font-family: "Saira Extra Condensed", Helvetica, Arial, Lucida, sans-serif;
+  font-size: 1.250rem;
+  text-transform: uppercase;
+  display: inline-block;
+  font-weight: bold;
+  padding: .375rem 1rem;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  user-select: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.tsd-btn:hover, .tsd-btn-primary:hover {
+  text-decoration: none;
+}
+
+.tsd-btn-primary {
+  background: #e02b20;
+  color: #fff;
+  border-color: transparent;
+}
+
+.tsd-btn-primary:hover {
+  background: #fff;
+  border-color: #e02b20;
+  color: #e02b20;
+}
+
+.tsd-image-responsive, .tsd-home-marketing-photo img, .tsd-home-marketing-photo-right img, .tsd-home-marketing-photo-left img {
+  width: 100%;
+  height: auto;
+}
+
+.tsd-unordered-list-no-bullets, .tsd-page-header-navigation ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tsd-request-proposal {
+  background-color: #fff;
+  padding: 2rem;
+}
+
+.tsd-request-proposal h3 {
+  font-size: 14px;
+  line-height: 2em;
+}
+
+.tsd-request-proposal p {
+  font-size: 38px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.tsd-request-proposal .tsd-btn-primary {
+  padding: .3em 1em;
+  line-height: 1.7em;
+  font-weight: 600;
+}
+
+.tsd-quote {
+  position: relative;
+  background: #fafafa;
+  border: 1px solid rgba(0, 0, 0, 0.025);
+  padding: 1.5rem;
+  padding-left: 3rem;
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+}
+
+.tsd-quote:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 40px 40px 0 0;
+  border-color: #e02b20 transparent transparent transparent;
+}
+
+.tsd-quote h4 {
+  line-height: 1.8em;
+  font-size: 13px;
+  color: #333;
+}
+
+.tsd-quote p {
+  color: #666;
+}
+
+.tsd-quote .fa-quote-left {
+  position: absolute;
+  left: 0.35rem;
+  top: 0.3rem;
+  color: #fff;
+  font-size: 0.75rem;
+}
+
+.tsd-quote .svg-inline--fa {
+  display: inline-block;
+  height: 1em;
+  vertical-align: -0.125em;
+}
+
+.tsd-quote-angled-edges, .tsd-quote-angled-edges-reverse {
+  position: relative;
+  z-index: 1;
+  background: #666;
+  margin: 60px 0;
+  padding: 4% 10px;
+}
+
+.tsd-quote-angled-edges:before, .tsd-quote-angled-edges-reverse:before, .tsd-quote-angled-edges:after, .tsd-quote-angled-edges-reverse:after {
+  background: inherit;
+  content: '';
+  display: block;
+  height: 50%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+  -webkit-backface-visibility: hidden;
+}
+
+.tsd-quote-angled-edges:before, .tsd-quote-angled-edges-reverse:before {
+  top: 0;
+  transform: skewY(1.5deg);
+  transform-origin: 100% 0;
+}
+
+.tsd-quote-angled-edges:after, .tsd-quote-angled-edges-reverse:after {
+  bottom: 0;
+  transform: skewY(-1.5deg);
+  transform-origin: 100%;
+}
+
+.tsd-quote-angled-edges p, .tsd-quote-angled-edges-reverse p {
+  color: #fff;
+  font-size: 1.7rem;
+  margin-bottom: 10px;
+}
+
+.tsd-quote-angled-edges h3, .tsd-quote-angled-edges-reverse h3, .tsd-quote-angled-edges h5, .tsd-quote-angled-edges-reverse h5 {
+  color: #333;
+}
+
+.tsd-quote-angled-edges-reverse {
+  position: relative;
+  z-index: 1;
+}
+
+.tsd-quote-angled-edges-reverse:before, .tsd-quote-angled-edges-reverse:after {
+  background: inherit;
+  content: '';
+  display: block;
+  height: 50%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+  -webkit-backface-visibility: hidden;
+}
+
+.tsd-quote-angled-edges-reverse:before {
+  top: 0;
+  transform: skewY(-1.5deg);
+  transform-origin: 0 0;
+}
+
+.tsd-quote-angled-edges-reverse:after {
+  bottom: 0;
+  transform: skewY(1.5deg);
+  transform-origin: 0 0;
+}
+
+.tsd-marketing-sign h2, .tsd-marketing-sign h3 {
+  letter-spacing: 1px;
+}
+
+.tsd-marketing-sign h2 {
+  line-height: 1.4em;
+  font-size: 2.375em;
+  color: #666;
+}
+
+.tsd-marketing-sign h3 {
+  line-height: 2em;
+  font-size: 0.875em;
+}
+
+.tsd-marketing-sign p {
+  line-height: 2em;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #666;
+}
+
+.tsd-marketing-sign-divider {
+  position: relative;
+  margin: 15px 0;
+  max-width: 60px;
+  height: 2px;
+  margin-left: 0px;
+  margin-right: auto;
+}
+
+.tsd-marketing-sign-divider:before {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  border-top-color: #e02b20;
+  border-top-width: 2px;
+  border-top-style: solid;
+  content: "";
+}
+
+.tsd-marketing-sign-divider .tsd-marketing-sign-divider-internal {
+  display: inline-block;
+  width: 100%;
+}
+
+.tsd-bullet-point {
+  display: flex;
+  align-items: center;
+}
+
+.tsd-bullet-point i {
+  margin-right: 15px;
+  color: #e02b20;
+}
+
+.tsd-bullet-point span {
+  font-size: 1.25rem;
+  color: #666;
+}
+
+.tsd-page-wrapper {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: "h" "c" "f";
+}
+
+.tsd-page-header {
+  grid-area: h;
+  z-index: 10;
+}
+
+.tsd-page-header-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 1rem;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+}
+
+.tsd-page-header-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tsd-page-header-logo-image {
+  width: 162px;
+  height: 72px;
+}
+
+.tsd-page-header-menu-toggler {
+  -webkit-opacity: 0.8;
+  -moz-opacity: 0.8;
+  opacity: 0.8;
+  padding: 0rem .6rem;
+  background-color: transparent;
+  border: 0px;
+}
+
+.tsd-page-header-menu-toggler:hover {
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+}
+
+.tsd-page-header-menu-toggler:focus {
+  outline: 0 !important;
+}
+
+.tsd-page-header-navigation {
+  display: none;
+  text-align: center;
+}
+
+.tsd-page-header-navigation.active {
+  display: grid;
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+.tsd-page-header-navigation ul li {
+  display: vertical;
+  height: 2.35rem;
+  font-weight: bold;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}
+
+.tsd-page-header-navigation ul li a {
+  color: #666;
+}
+
+.tsd-page-header-navigation ul li.active a {
+  color: #e02b20;
+  border-bottom: 3px solid #e02b20;
+}
+
+.tsd-page-content, .tsd-leadership, .tsd-projects, .tsd-services, .tsd-markets, .tsd-home {
+  grid-area: c;
+  display: grid;
+  grid-template-rows: auto 10px 1fr 75px;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: "ch" "." "cm";
+}
+
+.tsd-page-content-header, .tsd-leadership-header, .tsd-projects-header, .tsd-services-header, .tsd-markets-header, .tsd-home-header {
+  grid-area: ch;
+  height: 289px;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/assets/images/Wakefield-Commons-Raleigh-NC-IMG_9870-panaramic-1912x444.jpeg");
+  margin-bottom: 25px;
+}
+
+.tsd-page-content-header h3, .tsd-leadership-header h3, .tsd-projects-header h3, .tsd-services-header h3, .tsd-markets-header h3, .tsd-home-header h3 {
+  font-size: 2.5rem;
+  color: #fff;
+  font-family: "Saira Extra Condensed", Helvetica, Arial, Lucida, sans-serif;
+}
+
+.tsd-page-content-header p, .tsd-leadership-header p, .tsd-projects-header p, .tsd-services-header p, .tsd-markets-header p, .tsd-home-header p {
+  font-size: 1.250rem;
+  color: #fff;
+}
+
+.tsd-page-content-header-inner, .tsd-page-content-header section, .tsd-leadership-header section, .tsd-projects-header section, .tsd-services-header section, .tsd-markets-header section, .tsd-home-header section {
+  height: 100%;
+  display: grid;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.tsd-page-content-main {
+  grid-area: cm;
+  padding: 0 1rem;
+}
+
+.tsd-page-content-main2, .tsd-leadership-bio-content, .tsd-leadership-content, .tsd-projects-content, .tsd-services-content, .tsd-markets-content, .tsd-home-content {
+  grid-area: cm;
+}
+
+.tsd-page-content-section, .tsd-leadership-content-section, .tsd-projects-content-section, .tsd-services-content-section, .tsd-markets-content-section, .tsd-home-content-section {
+  padding: 0 1rem;
+}
+
+.tsd-page-footer {
+  grid-area: f;
+  background-color: #fafafa;
+  border-top: 10px solid #e02b20;
+  font-size: 0.875rem;
+}
+
+.tsd-page-footer-wrapper {
+  padding: 1rem 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "fw";
+}
+
+.tsd-page-footer-content {
+  background-color: #fff;
+  grid-area: fw;
+  display: grid;
+  grid-row-gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+.tsd-page-footer-content .tsd-request-proposal {
+  text-align: center;
+  border-bottom: 5px solid #e02b20;
+}
+
+.tsd-page-footer-contact {
+  padding: 0 1rem;
+  display: grid;
+  grid-row-gap: 1rem;
+  grid-template-areas: "fci" "fcc";
+  align-items: top;
+}
+
+.tsd-page-footer-contact-info {
+  grid-area: fci;
+  display: grid;
+  grid-template-columns: minmax(auto, max-content) auto;
+  grid-column-gap: 1.250rem;
+  grid-row-gap: 0.625rem;
+  align-items: center;
+  color: #666;
+}
+
+.tsd-page-footer-contact-info div {
+  line-height: 1.5rem;
+}
+
+.tsd-page-footer-contact-connect {
+  grid-area: fcc;
+  align-items: top;
+}
+
+.tsd-page-footer-contact-connect div {
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  color: #666;
+}
+
+.tsd-page-footer-contact-connect span {
+  color: #e02b20;
+}
+
+.tsd-page-footer-legal {
+  font-size: 0.625rem;
+  margin-bottom: 0.625rem;
+}
+
+.tsd-home-content-section {
+  display: grid;
+  grid-row-gap: 3px;
+}
+
+.tsd-home-marketing, .tsd-home-marketing-photo-text, .tsd-home-marketing-text-photo {
+  display: grid;
+  grid-row-gap: 2em;
+  grid-template-areas: "mt" "mp";
+  align-items: center;
+}
+
+.tsd-home-marketing-text {
+  grid-area: mt;
+  display: grid;
+  grid-row-gap: 2em;
+}
+
+.tsd-home-marketing-photo, .tsd-home-marketing-photo-right, .tsd-home-marketing-photo-left {
+  grid-area: mp;
+}
+
+.tsd-home-marketing-photo img, .tsd-home-marketing-photo-right img, .tsd-home-marketing-photo-left img {
+  max-width: 800px;
+}
+
+.tsd-home-marketing-photo-caption {
+  position: relative;
+  font-size: 0.813rem;
+  max-width: 80%;
+  background-color: #fff;
+  margin-top: -30px;
+  padding: 15px;
+  box-shadow: 0px 15px 80px -6px #00000033;
+}
+
+.tsd-home-benefits-grid {
+  display: grid;
+  align-items: center;
+}
+
+.tsd-home-benefits-grid .tsd-bullet-point {
+  margin-bottom: 15px;
+}
+
+.tsd-markets-content-section {
+  display: grid;
+  grid-row-gap: 3px;
+}
+
+.tsd-markets-content-grid {
+  display: grid;
+  align-items: center;
+}
+
+.tsd-markets-markets-list {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-column-gap: 3px;
+  grid-row-gap: 3px;
+}
+
+.tsd-markets-markets-list * {
+  padding: 10px;
+  background-color: #fafafa;
+}
+
+.tsd-markets-markets-list i {
+  color: #e02b20;
+}
+
+.tsd-markets-markets-list span {
+  font-size: 1.25rem;
+  color: #666;
+  align-self: stretch;
+}
+
+.tsd-services-content-section {
+  display: grid;
+  grid-row-gap: 3px;
+}
+
+.tsd-services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 2rem;
+  align-items: top;
+}
+
+.tsd-services-service {
+  border-bottom: 3px solid #e02b20;
+}
+
+.tsd-services-service.tsd-services-service-open {
+  border-bottom: 0;
+}
+
+.tsd-services-service-title:before {
+  float: right;
+}
+
+.tsd-services-service-toggle-icon:before {
+  margin-left: 20px;
+  content: "\f055";
+}
+
+.tsd-services-service-toggle-icon.tsd-services-service-toggle-icon-open:before {
+  content: "\f056";
+}
+
+.tsd-services-service-description {
+  display: none;
+  padding-bottom: 15px;
+}
+
+.tsd-services-service-description.tsd-services-service-description-open {
+  display: grid;
+}
+
+.tsd-projects {
+  background: #fafafa;
+}
+
+.tsd-projects-header ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #fff;
+  display: inline-block;
+  text-align: left;
+}
+
+.tsd-projects-content-section {
+  display: grid;
+  grid-row-gap: 3px;
+}
+
+.tsd-projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 2em;
+  align-items: top;
+}
+
+.tsd-project-summary {
+  background-color: #fff;
+  box-shadow: 0px 15px 80px -6px #00000033;
+}
+
+.tsd-project-summary p {
+  padding: 1rem 2rem;
+}
+
+.tsd-project-summary-heading {
+  padding: 1rem 2rem;
+}
+
+.tsd-project-summary-heading h1 {
+  color: #666;
+}
+
+.tsd-leadership-bio-content {
+  margin-top: 20px;
+}
+
+.tsd-leadership-content-section {
+  display: grid;
+  grid-row-gap: 3px;
+}
+
+.tsd-leadership-content-section .tsd-bullet-point i {
+  margin-right: 5px;
+}
+
+.tsd-leadership-content-section .tsd-bullet-point span {
+  color: #e02b20;
+}
+
+.tsd-leadership-content-section .tsd-leadership-bio {
+  margin-top: 10px;
+}
+
+.tsd-leadership-grid {
+  display: grid;
+  grid-row-gap: 2rem;
+}
+
+.tsd-leadership-preview {
+  border: 1px solid #fafafa;
+  box-shadow: 0px 0px 4px 2px #d6d9dc;
+  padding: 30px;
+}
+
+.tsd-leadership-preview img {
+  border-radius: 7px;
+  margin-bottom: 10px;
+}
+
+.tsd-leadership-preview hr {
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 10px;
+  border: 0px;
+  border-top: 3px solid #e02b20;
+}
+
+.tsd-leadership-preview .tsd-btn-primary {
+  padding: .3em 1em;
+  line-height: 1.7em;
+  font-weight: 600;
+}
+
+.tsd-leadership-bio {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 1rem;
+  margin-bottom: 1rem;
+  background: #fafafa;
+  border: 1px solid rgba(0, 0, 0, 0.025);
+  padding: 1rem;
+}
+
+.tsd-leadership-bio hr {
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0px;
+  border-top: 1px solid #e02b20;
+}
+
+.tsd-leadership-bio a {
+  color: #666;
+}
+
+.tsd-leadership-bio h5 {
+  padding: 0;
+}
+
+.tsd-leadership-bio-photo {
+  max-width: 370px;
+  max-height: 400px;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .tsd-page-wrapper {
+    grid-template-rows: 120px 1fr auto;
+  }
+  .tsd-page-header-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    text-align: left;
+    padding: 10px 1rem;
+  }
+  .tsd-page-header-logo-image {
+    width: 162px;
+    height: 72px;
+  }
+  .tsd-page-header-navigation {
+    display: block;
+    text-align: left;
+  }
+  .tsd-page-header-navigation ul li {
+    display: inline;
+  }
+  .tsd-page-header-navigation ul li {
+    padding-right: 1.4em;
+  }
+  .tsd-page-header-navigation ul li:last-child {
+    padding-right: 0em;
+  }
+  .tsd-page-header-menu-toggler {
+    display: none;
+  }
+  .tsd-page-footer-wrapper {
+    grid-template-columns: 1fr minmax(600px, 1fr) 1fr;
+    grid-template-areas: ". fw .";
+  }
+  .tsd-page-footer-contact {
+    grid-template-columns: minmax(300px, 1fr) 1fr;
+    grid-column-gap: 1rem;
+    grid-template-areas: "fci fcc";
+  }
+  .tsd-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2rem;
+  }
+  .tsd-leadership-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2rem;
+  }
+  .tsd-leadership-bio {
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: 2rem;
+    padding: 2rem;
+  }
+  .tsd-leadership-bio-photo {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .tsd-page-wrapper {
+    grid-template-rows: 138px 1fr auto;
+  }
+  .tsd-page-header-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 128px;
+  }
+  .tsd-page-header-logo-image {
+    width: 288px;
+    height: 128px;
+  }
+  .tsd-page-footer-wrapper {
+    grid-template-columns: 1fr minmax(700px, 1fr) 1fr;
+  }
+  .tsd-page-footer-contact {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2rem;
+  }
+  .tsd-home-marketing, .tsd-home-marketing-text-photo, .tsd-home-marketing-photo-text {
+    grid-column-gap: 2em;
+  }
+  .tsd-home-marketing-text-photo {
+    grid-template-columns: 1fr minmax(min-content, 475px);
+    grid-template-areas: "mt	mp";
+  }
+  .tsd-home-marketing-photo-text {
+    grid-template-columns: minmax(min-content, 475px) 1fr;
+    grid-template-areas: "mp	mt";
+  }
+  .tsd-home-marketing-photo-left img {
+    max-width: 475px;
+    box-shadow: -20px 20px 0px 0px #0c0c0c08;
+  }
+  .tsd-home-marketing-photo-right img {
+    max-width: 475px;
+    box-shadow: 20px -20px 0px 0px #0c0c0c08;
+  }
+  .tsd-home-marketing-photo-caption {
+    max-width: 80%;
+  }
+  .tsd-home-benefits-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .tsd-markets-content-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .tsd-services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .tsd-projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2em;
+  }
+  .tsd-leadership-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .tsd-page-content-header-inner, .tsd-page-content-header section, .tsd-home-header section, .tsd-markets-header section, .tsd-services-header section, .tsd-projects-header section, .tsd-leadership-header section {
+    max-width: 1140px;
+  }
+  .tsd-page-content-main {
+    min-width: 1140px;
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .tsd-page-content-section, .tsd-home-content-section, .tsd-markets-content-section, .tsd-services-content-section, .tsd-projects-content-section, .tsd-leadership-content-section {
+    min-width: 1140px;
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .tsd-page-footer-wrapper {
+    grid-template-columns: 1fr minmax(800px, 1fr) 1fr;
+  }
+}
+
+.test {
+  background-color: #e02b20;
+  padding: 5px;
+  transform: rotate(-2deg);
+}
+
+.test span {
+  color: #fff;
+}
+
+.test1 {
+  transform: rotate(-2deg);
+}
+
+.test2 {
+  color: #666;
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+
+.test2:before {
+  background-color: #e02b20;
+  position: absolute;
+  height: 10px;
+  width: 100%;
+  max-width: 100%;
+  bottom: -2px;
+  display: block;
+  content: "";
+  z-index: -1;
+}
+
+/*# sourceMappingURL=main.css.map */
