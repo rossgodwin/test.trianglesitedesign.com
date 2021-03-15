@@ -637,7 +637,7 @@ a {
 
 .tsd-quote-angled-edges p, .tsd-quote-angled-edges-reverse p {
   color: #fff;
-  font-size: 1.7rem;
+  font-size: 1.7em;
   margin-bottom: 10px;
 }
 
@@ -707,7 +707,6 @@ a {
 
 .tsd-marketing-sign-divider:before {
   position: absolute;
-  z-index: 10;
   top: 0;
   left: 0;
   width: 100%;
@@ -736,6 +735,63 @@ a {
 .tsd-bullet-point span {
   font-size: 1.25rem;
   color: #666;
+}
+
+.tsd-cardlist-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "clc" "cll";
+}
+
+.tsd-cardlist-card-wrapper {
+  grid-area: clc;
+}
+
+.tsd-cardlist-card {
+  background-image: url("/test.trianglesitedesign.com/assets/images/bg_poly-accent-red.png");
+  background-repeat: no-repeat;
+  background-position: 75% 75%;
+  padding: 75px 20px;
+  text-align: center;
+}
+
+.tsd-cardlist-card * {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.tsd-cardlist-card h2 {
+  font-size: 0.813em;
+}
+
+.tsd-cardlist-card p {
+  font-size: 1.875em;
+}
+
+.tsd-cardlist-card-animate, .tsd-cardlist-card {
+  overflow: hidden;
+  animation: tsd-animate-move-from-bottom-to-top 1s 1;
+}
+
+.tsd-cardlist-list-wrapper {
+  grid-area: cll;
+}
+
+.tsd-cardlist-list, .tsd-markets-cardlist-list {
+  box-shadow: 0px 15px 80px -6px #00000033;
+  font-size: 1.25rem;
+  color: #666;
+  padding: 10px;
+}
+
+.tsd-cardlist-list ul li, .tsd-markets-cardlist-list ul li {
+  margin-bottom: 15px;
+}
+
+.tsd-cardlist-list-animate, .tsd-markets-cardlist-list {
+  overflow: hidden;
+  animation: tsd-animate-move-from-top-to-bottom 1s 1;
 }
 
 .tsd-page-wrapper {
@@ -842,6 +898,14 @@ a {
   color: #fff;
 }
 
+.tsd-page-content-header-animate, .tsd-projects-header, .tsd-home-header {
+  overflow: hidden;
+}
+
+.tsd-page-content-header-animate section, .tsd-projects-header section, .tsd-home-header section {
+  animation: tsd-animate-move-from-bottom-to-top 1s 1;
+}
+
 .tsd-page-content-header-inner, .tsd-page-content-header section, .tsd-leadership-header section, .tsd-projects-header section, .tsd-services-header section, .tsd-markets-header section, .tsd-home-header section {
   height: 100%;
   display: grid;
@@ -849,16 +913,11 @@ a {
   padding: 0 1rem;
 }
 
-.tsd-page-content-main {
-  grid-area: cm;
-  padding: 0 1rem;
-}
-
-.tsd-page-content-main2, .tsd-leadership-bio-content, .tsd-leadership-content, .tsd-projects-content, .tsd-services-content, .tsd-markets-content, .tsd-home-content {
+.tsd-page-content-main, .tsd-leadership-bio-content, .tsd-leadership-content, .tsd-projects-content, .tsd-services-content, .tsd-markets-content, .tsd-home-content {
   grid-area: cm;
 }
 
-.tsd-page-content-section, .tsd-leadership-content-section, .tsd-projects-content-section, .tsd-services-content-section, .tsd-markets-content-section, .tsd-home-content-section {
+.tsd-page-content-width, .tsd-leadership-content-section, .tsd-projects-content-section, .tsd-services-content-section, .tsd-markets-content-section, .tsd-home-content-section {
   padding: 0 1rem;
 }
 
@@ -909,6 +968,12 @@ a {
 
 .tsd-page-footer-contact-info div {
   line-height: 1.5rem;
+}
+
+.tsd-page-footer-contact-info a {
+  color: #666;
+  padding-bottom: 1px;
+  border-bottom: 1px dashed;
 }
 
 .tsd-page-footer-contact-connect {
@@ -969,45 +1034,9 @@ a {
   box-shadow: 0px 15px 80px -6px #00000033;
 }
 
-.tsd-home-benefits-grid {
-  display: grid;
-  align-items: center;
-}
-
-.tsd-home-benefits-grid .tsd-bullet-point {
-  margin-bottom: 15px;
-}
-
 .tsd-markets-content-section {
   display: grid;
   grid-row-gap: 3px;
-}
-
-.tsd-markets-content-grid {
-  display: grid;
-  align-items: center;
-}
-
-.tsd-markets-markets-list {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  grid-column-gap: 3px;
-  grid-row-gap: 3px;
-}
-
-.tsd-markets-markets-list * {
-  padding: 10px;
-  background-color: #fafafa;
-}
-
-.tsd-markets-markets-list i {
-  color: #e02b20;
-}
-
-.tsd-markets-markets-list span {
-  font-size: 1.25rem;
-  color: #666;
-  align-self: stretch;
 }
 
 .tsd-services-content-section {
@@ -1022,25 +1051,29 @@ a {
   align-items: top;
 }
 
-.tsd-services-service {
+.tsd-services-service, .tsd-services-service-clickable {
   border-bottom: 3px solid #e02b20;
 }
 
-.tsd-services-service.tsd-services-service-open {
+.tsd-services-service.tsd-services-service-open, .tsd-services-service-open.tsd-services-service-clickable {
   border-bottom: 0;
 }
 
-.tsd-services-service-title:before {
+.tsd-services-service-title:before, .tsd-services-service-title-clickable:before {
   float: right;
+}
+
+.tsd-services-service-title-clickable {
+  cursor: pointer;
 }
 
 .tsd-services-service-toggle-icon:before {
   margin-left: 20px;
-  content: "\f055";
+  content: "\f078";
 }
 
 .tsd-services-service-toggle-icon.tsd-services-service-toggle-icon-open:before {
-  content: "\f056";
+  content: "\f077";
 }
 
 .tsd-services-service-description {
@@ -1114,7 +1147,13 @@ a {
   margin-top: 10px;
 }
 
-.tsd-leadership-grid {
+.tsd-leadership-marketing-grid {
+  display: grid;
+  grid-row-gap: 2rem;
+  margin-bottom: 60px;
+}
+
+.tsd-leadership-team-grid {
   display: grid;
   grid-row-gap: 2rem;
 }
@@ -1145,11 +1184,11 @@ a {
 }
 
 .tsd-leadership-bio {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr;
   grid-row-gap: 1rem;
   margin-bottom: 1rem;
-  background: #fafafa;
   border: 1px solid rgba(0, 0, 0, 0.025);
   padding: 1rem;
 }
@@ -1170,10 +1209,91 @@ a {
   padding: 0;
 }
 
+.tsd-leadership-bio:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  background-image: url("/test.trianglesitedesign.com/assets/images/bg_poly-core-off-white.jpg");
+  background-repeat: no-repeat;
+  background-position: 75% 75%;
+  background-size: cover;
+  z-index: -1;
+}
+
 .tsd-leadership-bio-photo {
   max-width: 370px;
+  min-width: 250px;
   max-height: 400px;
   margin-bottom: 1rem;
+}
+
+.tsd-leadership-experience-metric .tsd-leadership-experience-metric-graphic {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.tsd-leadership-experience-metric .tsd-leadership-experience-metric-graphic .tsd-leadership-experience-metric-graphic-value {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5em;
+  font-weight: bold;
+  font-family: "Courier New", monospace;
+}
+
+.tsd-leadership-experience-metric .tsd-leadership-experience-metric-label {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.tsd-leadership-experience-metric-graphic-svg {
+  display: block;
+  margin: auto;
+  width: 226px;
+  height: 226px;
+}
+
+.tsd-leadership-experience-metric-graphic-svg circle {
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  stroke-dasharray: 628.32, 628.32;
+  stroke-width: 10;
+  fill: transparent;
+  r: 100;
+  cx: 113;
+  cy: 113;
+}
+
+.tsd-leadership-experience-metric-graphic-svg circle.fill {
+  stroke: #D3D3D3;
+}
+
+.tsd-leadership-experience-metric-graphic-svg circle.progress {
+  stroke: #e02b20;
+  transition: stroke-dashoffset 0.35s;
+  stroke-dashoffset: 214.16;
+  -webkit-animation: NAME-YOUR-ANIMATION 1.5s forwards;
+  -webkit-animation-timing-function: linear;
+}
+
+@-webkit-keyframes NAME-YOUR-ANIMATION {
+  0% {
+    stroke-dashoffset: 628.32;
+  }
+  100% {
+    stroke-dashoffset: 157.08;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1222,7 +1342,11 @@ a {
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 2rem;
   }
-  .tsd-leadership-grid {
+  .tsd-leadership-marketing-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2rem;
+  }
+  .tsd-leadership-team-grid {
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 2rem;
   }
@@ -1237,6 +1361,11 @@ a {
 }
 
 @media (min-width: 992px) {
+  .tsd-cardlist-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px auto;
+    grid-template-areas: "clc ." "clc cll";
+  }
   .tsd-page-wrapper {
     grid-template-rows: 138px 1fr auto;
   }
@@ -1279,12 +1408,6 @@ a {
   .tsd-home-marketing-photo-caption {
     max-width: 80%;
   }
-  .tsd-home-benefits-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-  .tsd-markets-content-grid {
-    grid-template-columns: 1fr 1fr;
-  }
   .tsd-services-grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -1292,7 +1415,7 @@ a {
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 2em;
   }
-  .tsd-leadership-grid {
+  .tsd-leadership-team-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -1301,13 +1424,7 @@ a {
   .tsd-page-content-header-inner, .tsd-page-content-header section, .tsd-home-header section, .tsd-markets-header section, .tsd-services-header section, .tsd-projects-header section, .tsd-leadership-header section {
     max-width: 1140px;
   }
-  .tsd-page-content-main {
-    min-width: 1140px;
-    max-width: 1140px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .tsd-page-content-section, .tsd-home-content-section, .tsd-markets-content-section, .tsd-services-content-section, .tsd-projects-content-section, .tsd-leadership-content-section {
+  .tsd-page-content-width, .tsd-home-content-section, .tsd-markets-content-section, .tsd-services-content-section, .tsd-projects-content-section, .tsd-leadership-content-section {
     min-width: 1140px;
     max-width: 1140px;
     margin-left: auto;
@@ -1318,37 +1435,35 @@ a {
   }
 }
 
-.test {
-  background-color: #e02b20;
-  padding: 5px;
-  transform: rotate(-2deg);
+.tsd-animate-fadein-element, .tsd-page-footer-contact-hours, .tsd-page-footer-contact-phone_number, .tsd-page-footer-contact-address {
+  visibility: hidden;
+  opacity: 0;
+  font-size: 2px;
+  transition: all 1s;
 }
 
-.test span {
-  color: #fff;
+.tsd-animate-fadein-element.tsd-animate-fadein-element-visible, .tsd-animate-fadein-element-visible.tsd-page-footer-contact-hours, .tsd-animate-fadein-element-visible.tsd-page-footer-contact-phone_number, .tsd-animate-fadein-element-visible.tsd-page-footer-contact-address {
+  visibility: visible;
+  opacity: 1;
+  font-size: inherit;
 }
 
-.test1 {
-  transform: rotate(-2deg);
+@keyframes tsd-animate-move-from-bottom-to-top {
+  from {
+    margin-top: 15%;
+  }
+  to {
+    margin-top: 0%;
+  }
 }
 
-.test2 {
-  color: #666;
-  display: inline-block;
-  position: relative;
-  z-index: 2;
-}
-
-.test2:before {
-  background-color: #e02b20;
-  position: absolute;
-  height: 10px;
-  width: 100%;
-  max-width: 100%;
-  bottom: -2px;
-  display: block;
-  content: "";
-  z-index: -1;
+@keyframes tsd-animate-move-from-top-to-bottom {
+  from {
+    margin-top: -15%;
+  }
+  to {
+    margin-top: 0%;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
