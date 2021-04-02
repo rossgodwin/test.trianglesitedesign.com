@@ -437,6 +437,7 @@ html {
   font-family: "Poppins", Helvetica, Arial, Lucida, sans-serif;
   font-size: 16px;
   letter-spacing: 1px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -475,7 +476,7 @@ a {
   text-decoration: none;
 }
 
-.tsd-horizontal-align-center, .tsd-leadership-bio-photo, .tsd-leadership-preview, .tsd-project-summary, .tsd-home-marketing-photo-caption, .tsd-home-marketing-photo, .tsd-home-marketing-photo-right, .tsd-home-marketing-photo-left, .tsd-page-footer-legal, .tsd-page-footer-contact-connect, .tsd-page-footer-contact-info, .tsd-page-content-header-inner, .tsd-page-content-header section, .tsd-leadership-header section, .tsd-projects-header section, .tsd-services-header section, .tsd-markets-header section, .tsd-home-header section, .tsd-quote-angled-edges, .tsd-quote-angled-edges-reverse {
+.tsd-horizontal-align-center, .tsd-leadership-bio-photo, .tsd-leadership-preview, .tsd-project-summary, .tsd-services-more-services-toolbar, .tsd-home-marketing-photo-caption, .tsd-home-marketing-photo, .tsd-home-marketing-photo-right, .tsd-home-marketing-photo-left, .tsd-page-footer-legal, .tsd-page-footer-contact-connect, .tsd-page-footer-contact-info, .tsd-page-content-header-inner, .tsd-page-content-header section, .tsd-leadership-header section, .tsd-projects-header section, .tsd-services-header section, .tsd-markets-header section, .tsd-home-header section, .tsd-quote-angled-edges, .tsd-quote-angled-edges-reverse {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -486,16 +487,22 @@ a {
   margin-right: auto;
 }
 
+.tsd-horizontal-align-right {
+  text-align: right;
+  margin-left: auto;
+}
+
 .tsd-fontawesome-icon, .tsd-services-service-toggle-icon:before {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
 }
 
-.tsd-btn, .tsd-btn-primary {
+.tsd-button, .tsd-button-primary {
   display: inline-block;
   font-family: "Saira Extra Condensed", Helvetica, Arial, Lucida, sans-serif;
   font-size: 1.250rem;
   text-transform: uppercase;
+  cursor: pointer;
   display: inline-block;
   font-weight: bold;
   padding: .375rem 1rem;
@@ -508,17 +515,30 @@ a {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-.tsd-btn:hover, .tsd-btn-primary:hover {
+.tsd-button:hover, .tsd-button-primary:hover {
   text-decoration: none;
 }
 
-.tsd-btn-primary {
+.tsd-button-icon-right i {
+  margin-left: 10px;
+}
+
+.tsd-button-primary {
   background: #e02b20;
   color: #fff;
   border-color: transparent;
+  padding: .3em 1em;
+  line-height: 1.7em;
+  font-weight: 600;
 }
 
-.tsd-btn-primary:hover {
+.tsd-button-primary:hover {
+  background: #fff;
+  border-color: #e02b20;
+  color: #e02b20;
+}
+
+.tsd-button-primary-pressed {
   background: #fff;
   border-color: #e02b20;
   color: #e02b20;
@@ -549,58 +569,6 @@ a {
   font-size: 38px;
   font-weight: 700;
   text-transform: uppercase;
-}
-
-.tsd-request-proposal .tsd-btn-primary {
-  padding: .3em 1em;
-  line-height: 1.7em;
-  font-weight: 600;
-}
-
-.tsd-quote {
-  position: relative;
-  background: #fafafa;
-  border: 1px solid rgba(0, 0, 0, 0.025);
-  padding: 1.5rem;
-  padding-left: 3rem;
-  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
-}
-
-.tsd-quote:before {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 40px 40px 0 0;
-  border-color: #e02b20 transparent transparent transparent;
-}
-
-.tsd-quote h4 {
-  line-height: 1.8em;
-  font-size: 13px;
-  color: #333;
-}
-
-.tsd-quote p {
-  color: #666;
-}
-
-.tsd-quote .fa-quote-left {
-  position: absolute;
-  left: 0.35rem;
-  top: 0.3rem;
-  color: #fff;
-  font-size: 0.75rem;
-}
-
-.tsd-quote .svg-inline--fa {
-  display: inline-block;
-  height: 1em;
-  vertical-align: -0.125em;
 }
 
 .tsd-quote-angled-edges, .tsd-quote-angled-edges-reverse {
@@ -637,7 +605,7 @@ a {
 
 .tsd-quote-angled-edges p, .tsd-quote-angled-edges-reverse p {
   color: #fff;
-  font-size: 1.7em;
+  font-size: 1.5em;
   margin-bottom: 10px;
 }
 
@@ -769,29 +737,19 @@ a {
   font-size: 1.875em;
 }
 
-.tsd-cardlist-card-animate, .tsd-cardlist-card {
-  overflow: hidden;
-  animation: tsd-animate-move-from-bottom-to-top 1s 1;
-}
-
 .tsd-cardlist-list-wrapper {
   grid-area: cll;
 }
 
-.tsd-cardlist-list, .tsd-markets-cardlist-list {
+.tsd-cardlist-list {
   box-shadow: 0px 15px 80px -6px #00000033;
   font-size: 1.25rem;
   color: #666;
   padding: 10px;
 }
 
-.tsd-cardlist-list ul li, .tsd-markets-cardlist-list ul li {
+.tsd-cardlist-list ul li {
   margin-bottom: 15px;
-}
-
-.tsd-cardlist-list-animate, .tsd-markets-cardlist-list {
-  overflow: hidden;
-  animation: tsd-animate-move-from-top-to-bottom 1s 1;
 }
 
 .tsd-page-wrapper {
@@ -885,6 +843,7 @@ a {
   height: 289px;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/test.trianglesitedesign.com/assets/images/Wakefield-Commons-Raleigh-NC-IMG_9870-panaramic-1912x444.jpeg");
   margin-bottom: 25px;
+  z-index: 1;
 }
 
 .tsd-page-content-header h3, .tsd-leadership-header h3, .tsd-projects-header h3, .tsd-services-header h3, .tsd-markets-header h3, .tsd-home-header h3 {
@@ -896,14 +855,6 @@ a {
 .tsd-page-content-header p, .tsd-leadership-header p, .tsd-projects-header p, .tsd-services-header p, .tsd-markets-header p, .tsd-home-header p {
   font-size: 1.250rem;
   color: #fff;
-}
-
-.tsd-page-content-header-animate, .tsd-projects-header, .tsd-home-header {
-  overflow: hidden;
-}
-
-.tsd-page-content-header-animate section, .tsd-projects-header section, .tsd-home-header section {
-  animation: tsd-animate-move-from-bottom-to-top 1s 1;
 }
 
 .tsd-page-content-header-inner, .tsd-page-content-header section, .tsd-leadership-header section, .tsd-projects-header section, .tsd-services-header section, .tsd-markets-header section, .tsd-home-header section {
@@ -1051,6 +1002,10 @@ a {
   align-items: top;
 }
 
+.tsd-services-more-services-toolbar {
+  margin-bottom: 15px;
+}
+
 .tsd-services-service, .tsd-services-service-clickable {
   border-bottom: 3px solid #e02b20;
 }
@@ -1085,10 +1040,6 @@ a {
   display: grid;
 }
 
-.tsd-projects {
-  background: #fafafa;
-}
-
 .tsd-projects-header ul {
   margin-top: 0;
   margin-bottom: 0;
@@ -1109,9 +1060,16 @@ a {
   align-items: top;
 }
 
+.tsd-projects-grid-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
 .tsd-project-summary {
   background-color: #fff;
-  box-shadow: 0px 15px 80px -6px #00000033;
+  box-shadow: 0px 0px 4px 2px #d6d9dc;
+  border: 1px solid rgba(0, 0, 0, 0.025);
 }
 
 .tsd-project-summary p {
@@ -1175,12 +1133,6 @@ a {
   margin-bottom: 10px;
   border: 0px;
   border-top: 3px solid #e02b20;
-}
-
-.tsd-leadership-preview .tsd-btn-primary {
-  padding: .3em 1em;
-  line-height: 1.7em;
-  font-weight: 600;
 }
 
 .tsd-leadership-bio {
@@ -1249,7 +1201,6 @@ a {
   justify-content: center;
   font-size: 2.5em;
   font-weight: bold;
-  font-family: "Courier New", monospace;
 }
 
 .tsd-leadership-experience-metric .tsd-leadership-experience-metric-label {
@@ -1297,6 +1248,9 @@ a {
 }
 
 @media (min-width: 768px) {
+  .tsd-element-scroll-snap {
+    scroll-margin-top: 120px;
+  }
   .tsd-page-wrapper {
     grid-template-rows: 120px 1fr auto;
   }
@@ -1342,6 +1296,10 @@ a {
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 2rem;
   }
+  .tsd-services-additional-services-toolbar {
+    text-align: left;
+    margin-right: auto;
+  }
   .tsd-leadership-marketing-grid {
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 2rem;
@@ -1361,13 +1319,16 @@ a {
 }
 
 @media (min-width: 992px) {
+  .tsd-element-scroll-snap {
+    scroll-margin-top: 148px;
+  }
   .tsd-cardlist-grid {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 100px auto;
+    grid-template-rows: 50px auto;
     grid-template-areas: "clc ." "clc cll";
   }
   .tsd-page-wrapper {
-    grid-template-rows: 138px 1fr auto;
+    grid-template-rows: 148px 1fr auto;
   }
   .tsd-page-header-wrapper {
     flex-direction: row;
@@ -1432,37 +1393,6 @@ a {
   }
   .tsd-page-footer-wrapper {
     grid-template-columns: 1fr minmax(800px, 1fr) 1fr;
-  }
-}
-
-.tsd-animate-fadein-element, .tsd-page-footer-contact-hours, .tsd-page-footer-contact-phone_number, .tsd-page-footer-contact-address {
-  visibility: hidden;
-  opacity: 0;
-  font-size: 2px;
-  transition: all 1s;
-}
-
-.tsd-animate-fadein-element.tsd-animate-fadein-element-visible, .tsd-animate-fadein-element-visible.tsd-page-footer-contact-hours, .tsd-animate-fadein-element-visible.tsd-page-footer-contact-phone_number, .tsd-animate-fadein-element-visible.tsd-page-footer-contact-address {
-  visibility: visible;
-  opacity: 1;
-  font-size: inherit;
-}
-
-@keyframes tsd-animate-move-from-bottom-to-top {
-  from {
-    margin-top: 15%;
-  }
-  to {
-    margin-top: 0%;
-  }
-}
-
-@keyframes tsd-animate-move-from-top-to-bottom {
-  from {
-    margin-top: -15%;
-  }
-  to {
-    margin-top: 0%;
   }
 }
 

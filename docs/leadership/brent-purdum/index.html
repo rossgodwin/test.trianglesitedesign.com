@@ -8,6 +8,7 @@
 
 <link rel='stylesheet' id='et-builder-googlefonts-cached-css'  href='https://fonts.googleapis.com/css?family=Poppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2Cregular%2Citalic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CPlayfair+Display%3Aregular%2Citalic%2C700%2C700italic%2C900%2C900italic%7CSaira+Extra+Condensed%3A100%2C200%2C300%2Cregular%2C500%2C600%2C700%2C800%2C900&#038;ver=5.6#038;subset=latin,devanagari,latin-ext,cyrillic,vietnamese' type='text/css' media='all' />
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" >
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <link rel="stylesheet" href="/test.trianglesitedesign.com/assets/css/main.css">
 
 	</head>
@@ -98,7 +99,7 @@
 <div class="tsd-quote-angled-edges">
 	<section class="tsd-page-content-width">
 		<p>
-			<i class="fas fa-quote-left fa-2x fa-inverse" style="margin-right: 10px;" aria-hidden="true"></i>
+			<i class="fas fa-quote-left" style="margin-right: 10px;" aria-hidden="true"></i>
 			It's always been a pleasure working with TSD; they are extremely knowledgeable in the art of stormwater design and always prompt with our inquiries.
 		</p>
 		<h3>Lee Humphrey</h3>
@@ -110,22 +111,22 @@
 			
 			<footer id="contact" class="tsd-page-footer">
 	<div class="tsd-page-footer-wrapper">
-		<div class="tsd-page-footer-content">
+		<div data-aos="fade-up" class="tsd-page-footer-content">
 			<div class="tsd-request-proposal">
 	<div style="padding-bottom: 20px;">
 		<h3>Make Your Vision a Reality</h3>
 		<p>Request a Proposal</p>
 	</div>
-	<a class="tsd-btn-primary" href="" role="button" target="_blank">Get Started</a>
+	<a class="tsd-button-primary" href="mailto:rlowder@trianglesitedesign.com;mlowder@trianglesitedesign.com?subject=Request for Proposal&body=Please reach to me." role="button">Get Started</a>
 </div>
 			
 			<div class="tsd-page-footer-contact">
-				<div class="tsd-page-footer-contact-info">
+				<div data-aos="zoom-in" class="tsd-page-footer-contact-info">
 					<span class="fa-stack fa-2x">
 						<i class="fas fa-circle fa-stack-2x" aria-hidden="true"></i>
 						<i class="fa fa-map-marker-alt fa-stack-1x fa-inverse" aria-hidden="true"></i>
 					</span>
-					<div class="tsd-page-footer-contact-address">
+					<div>
 						<a href="https://goo.gl/maps/B6HC9R6WakWR4yd99" target="_blank">
 							4004 Barrett Drive, Suite 101
 							<br>
@@ -181,39 +182,50 @@
 		
 		<script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
 
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
-	function elementScrolled(el) {
-		var docViewTop = $(window).scrollTop();
-		var docViewBottom = docViewTop + $(window).height();
-		var elTop = $(el).offset().top;
-		return ((elTop <= docViewBottom) && (elTop >= docViewTop));
-	}
-	
-	$(document).ready(function() {
-		var fadeInElements = [
-			'.tsd-page-footer-contact-address',
-			'.tsd-page-footer-contact-phone_number',
-			'.tsd-page-footer-contact-hours'
-		];
+	AOS.init({
+		duration: 1000
+	});
+</script>
 
-		jQuery.each(fadeInElements, function(i, el) {
-			if (elementScrolled(el)) {
-				$(el).addClass('tsd-animate-fadein-element-visible');
-			}
-		});
-		
+<script>
+	$(document).ready(function() {
 		$(".tsd-page-header-menu-toggler").click(function(e) {
 			$(".tsd-page-header-navigation").toggleClass("active");
 		});
+		
+		$("#tsd-services-more-services-toggle-button").click(function(e) {
+			var el = $(this);
+			
+			if (el.text() == el.data("text-swap")) {
+				el.text(el.data("text-original"));
+			} else {
+				el.data("text-original", el.text());
+				el.text(el.data("text-swap"));
+			}
+			
+			if (!el.hasClass("tsd-button-primary-pressed")) {
+				el.addClass("tsd-button-primary-pressed");
 
-		$(".tsd-services-expand-all").click(function(e) {
-			$('.tsd-services-service-clickable').each(function () {
-				if (!$(this).hasClass("tsd-services-service-open")) {
-					$(this).toggleClass("tsd-services-service-open");
-					$(this).find(".tsd-services-service-toggle-icon").toggleClass("tsd-services-service-toggle-icon-open");
-					$(this).find(".tsd-services-service-description").toggleClass("tsd-services-service-description-open");
-				}
-			});
+				$("#more-services .tsd-services-service-clickable").each(function() {
+					if (!$(this).hasClass("tsd-services-service-open")) {
+						$(this).addClass("tsd-services-service-open");
+						$(this).find(".tsd-services-service-toggle-icon").addClass("tsd-services-service-toggle-icon-open");
+						$(this).find(".tsd-services-service-description").addClass("tsd-services-service-description-open");
+					}
+				});
+			} else {
+				el.removeClass("tsd-button-primary-pressed");
+
+				$("#more-services .tsd-services-service-clickable").each(function() {
+					if ($(this).hasClass("tsd-services-service-open")) {
+						$(this).removeClass("tsd-services-service-open");
+						$(this).find(".tsd-services-service-toggle-icon").removeClass("tsd-services-service-toggle-icon-open");
+						$(this).find(".tsd-services-service-description").removeClass("tsd-services-service-description-open");
+					}
+				});
+			}
 		});
 		
 		$(".tsd-services-service-clickable").click(function(e) {
@@ -222,14 +234,6 @@
 			$(this).find(".tsd-services-service-description").toggleClass("tsd-services-service-description-open");
 		});
 
-		$(window).scroll(function() {
-			jQuery.each(fadeInElements, function(i, el) {
-				if (!$(el).hasClass('tsd-animate-fadein-element-visible') && elementScrolled(el)) {
-					$(el).addClass('tsd-animate-fadein-element-visible');
-				}
-			});
-		});
-		
 		$('.tsd-leadership-experience-metric-counter').each(function () {
 		    $(this).prop('Counter',0).animate({
 		        Counter: $(this).text()
