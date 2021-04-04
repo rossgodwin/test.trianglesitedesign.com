@@ -1,11 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<meta charset="utf-8" />
 <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
 
+ 
+
+
+
+
+
+
+
+
+<link rel="canonical" href="https://rossgodwin.github.io/leadership/toni-ragan/">
+
+<title>Civil Engineering Services, Raleigh NC | Triangle Site Design - Leadership - Toni Ragan</title>
+<meta name="description" content="A civil consulting and engineering firm that specializes in land planning and land development design in North Carolina, South Carolina and Virginia." />
+
+<meta property="og:title" content="Civil Engineering Services, Raleigh NC | Triangle Site Design - Leadership - Toni Ragan" />
+<meta property="og:description" content="A civil consulting and engineering firm that specializes in land planning and land development design in North Carolina, South Carolina and Virginia." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://rossgodwin.github.io/leadership/toni-ragan/" />
+<meta property="og:site_name" content="Triangle Site Design" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="/assets/images/favicon/site.webmanifest">
+<link rel="mask-icon" href="/assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/assets/images/favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/assets/images/favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
 <link rel='stylesheet' id='et-builder-googlefonts-cached-css'  href='https://fonts.googleapis.com/css?family=Poppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2Cregular%2Citalic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CPlayfair+Display%3Aregular%2Citalic%2C700%2C700italic%2C900%2C900italic%7CSaira+Extra+Condensed%3A100%2C200%2C300%2Cregular%2C500%2C600%2C700%2C800%2C900&#038;ver=5.6#038;subset=latin,devanagari,latin-ext,cyrillic,vietnamese' type='text/css' media='all' />
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" >
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -18,7 +46,7 @@
 	<div class="tsd-page-header-wrapper">
 		<div class="tsd-page-header-title">
 			<a class="" href="/test.trianglesitedesign.com/">
-				<img class="tsd-page-header-logo-image" src="/test.trianglesitedesign.com/assets/images/logo.png" alt="Triangle Site Design">
+				<img class="tsd-page-header-logo-image" src="/test.trianglesitedesign.com/assets/images/logo.png" alt="Civil Engineering Services, Raleigh NC | Triangle Site Design">
 			</a>
 			
 			<button class="tsd-page-header-menu-toggler" type="button" aria-label="Toggle navigation">
@@ -95,7 +123,7 @@
 <div class="tsd-quote-angled-edges">
 	<section class="tsd-page-content-width">
 		<p>
-			<i class="fas fa-quote-left" style="margin-right: 10px;" aria-hidden="true"></i>
+			<i class="fas fa-quote-left fa-inverse" style="margin-right: 10px;" aria-hidden="true"></i>
 			It's always been a pleasure working with TSD; they are extremely knowledgeable in the art of stormwater design and always prompt with our inquiries.
 		</p>
 		<h3>Lee Humphrey</h3>
@@ -169,12 +197,17 @@
 			</div>
 			
 			<div class="tsd-page-footer-legal">
-				&copy;Copyright 2021 - Triangle Site Design, PLLC - All Rights Reserved
+				&copy; <span id="year"></span> - Triangle Site Design, PLLC - All Rights Reserved
 			</div>
 		</div>
 	</div>
 </footer>
 		</div>
+		
+		<a class="tsd-button-scroll_to_top hide" href="">
+	<i class="fas fa-chevron-up"></i>
+	<span class="tsd-button-scroll_to_top-screen-reader-text">Back to top</span>
+</a>
 		
 		<script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
 
@@ -186,11 +219,27 @@
 </script>
 
 <script>
+	function onScrollScrollToTopButtonRenderer() {
+		let y = window.scrollY - 400;
+		
+		if (y > 0) {
+			$(".tsd-button-scroll_to_top").removeClass("hide");
+			$(".tsd-button-scroll_to_top").addClass("show");
+		} else {
+			$(".tsd-button-scroll_to_top").removeClass("show");
+			$(".tsd-button-scroll_to_top").addClass("hide");
+		}
+	}
+	
 	$(document).ready(function() {
 		$(".tsd-page-header-menu-toggler").click(function(e) {
 			$(".tsd-page-header-navigation").toggleClass("active");
 		});
-		
+
+		$("#year").html(new Date().getFullYear());
+
+		$(window).scroll(onScrollScrollToTopButtonRenderer);
+
 		$("#tsd-services-more-services-toggle-button").click(function(e) {
 			var el = $(this);
 			
@@ -222,6 +271,15 @@
 					}
 				});
 			}
+		});
+		
+		$(".tsd-button-scroll_to_top").click(function(e) {
+			e.preventDefault();
+			window.scroll({
+				top: 0, 
+				left: 0, 
+				behavior: 'smooth'
+			});
 		});
 		
 		$(".tsd-services-service-clickable").click(function(e) {

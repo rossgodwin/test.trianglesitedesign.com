@@ -508,7 +508,7 @@ a {
   padding: .375rem 1rem;
   text-align: center;
   vertical-align: middle;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   border-radius: 0.25rem;
   text-decoration: none;
   user-select: none;
@@ -542,6 +542,75 @@ a {
   background: #fff;
   border-color: #e02b20;
   color: #e02b20;
+}
+
+.tsd-button-scroll_to_top {
+  transition: all .25s ease-in-out;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  display: inline-flex;
+  z-index: 100;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 100px 0;
+  border-radius: 10px 0 0 10px;
+  padding: .25em;
+  width: 40px;
+  height: 40px;
+  border-style: solid;
+  border-width: 2px 0 2px 2px;
+  border-color: #e02b20;
+  background: #e02b20;
+  color: #fff;
+  line-height: 1.7em;
+  font-weight: 600;
+}
+
+.tsd-button-scroll_to_top:hover {
+  background: #fff;
+  color: #e02b20;
+}
+
+.tsd-button-scroll_to_top.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tsd-button-scroll_to_top.hide {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.tsd-button-scroll_to_top-screen-reader-text {
+  position: absolute;
+  clip-path: inset(50%);
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  word-wrap: normal !important;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.tsd-button-scroll_to_top-screen-reader-text:focus {
+  display: block;
+  top: 5px;
+  left: 5px;
+  z-index: 100000;
+  clip-path: none;
+  background-color: #eee;
+  padding: 15px 23px 14px;
+  width: auto;
+  height: auto;
+  text-decoration: none;
+  line-height: normal;
+  color: #444;
+  font-size: 1em;
+  clip: auto !important;
 }
 
 .tsd-image-responsive, .tsd-home-marketing-photo img, .tsd-home-marketing-photo-right img, .tsd-home-marketing-photo-left img {
